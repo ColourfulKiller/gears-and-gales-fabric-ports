@@ -1,0 +1,7 @@
+accessWidener v2 named
+# Converted from Domum's NeoForge accesstransformer.cfg (neoforge-only/accesstransformer.cfg) as the port needs them.
+
+
+# DataComponentPatchBuilder extends the vanilla builder (was in the NeoForge access transformer)
+accessible method net/minecraft/core/component/DataComponentPatch$Builder <init> ()V
+accessible field net/minecraft/core/component/DataComponentPatch$Builder map Lit/unimi/dsi/fastutil/objects/Reference2ObjectMap;

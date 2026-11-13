@@ -1,0 +1,53 @@
+// Fabric 1.21.11 port of Structurize (originally NeoForge 1.21.1). The NeoForge build files are kept as *.neoforge.
+plugins {
+    id 'fabric-loom' version '1.19.4'
+}
+
+version = project.mod_version
+group = 'com.ldtteam'
+base { archivesName = 'structurize-fabric' }
+
+// Folder holding ForgeConfigAPIPort-v21.11.1-mc1.21.11-Fabric.jar (CurseForge / Modrinth). Override with -PlibsDir=<folder>.
+def packCache = file(findProperty('libsDir') ?: '../../cache/jars')
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    // Provides NeoForge's ModConfigSpec API on Fabric (same jar the modpack ships)
+    modImplementation files("${packCache}/ForgeConfigAPIPort-v21.11.1-mc1.21.11-Fabric.jar")
+    // FCAP ships these jar-in-jar; the dev runtime doesn't unpack nested jars of a files() dependency
+    runtimeOnly 'com.electronwill.night-config:core:3.8.3'
+    runtimeOnly 'com.electronwill.night-config:toml:3.8.3'
+    // @Nullable / @Nonnull, which NeoForge's classpath supplied
+    compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
+    testImplementation 'junit:junit:4.13.2'
+    // shared NeoForge-replacement layer (com.ldtteam.fabric) lives in the BlockUI port
+    implementation files('../blockui/build/devlibs/blockui-fabric-1.21.11-fabric-0.1.0-dev.jar')
+    implementation files('../domum/build/devlibs/domum-ornamentum-fabric-1.21.11-fabric-0.1.0-dev.jar')
+}
+
+loom {
+    accessWidenerPath = file('src/main/resources/structurize.accesswidener')
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand 'version': project.version }
+}
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+    withSourcesJar()
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+    options.compilerArgs += ['-Xmaxerrs', '10000']
+}
+
+jar {
+    from('LICENSE') { rename { "${it}_structurize" } }
+}

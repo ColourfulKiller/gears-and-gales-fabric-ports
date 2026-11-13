@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "minecolonies",
+  "version": "${version}",
+  "name": "MineColonies",
+  "description": "Build and run a colony (Fabric 1.21.11 port of the NeoForge 1.21.1 mod).",
+  "authors": ["ldtteam"],
+  "contact": { "sources": "https://github.com/ldtteam/minecolonies" },
+  "license": "GPL-3.0",
+  "icon": "minecolonies_logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.minecolonies.core.MineColonies"],
+    "client": ["com.minecolonies.core.MineColoniesClient"]
+  },
+  "accessWidener": "minecolonies.accesswidener",
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~1.21.11",
+    "fabric-api": "*",
+    "forgeconfigapiport": "*",
+    "blockui": "*",
+    "domum_ornamentum": "*",
+    "structurize": "*",
+    "multipiston": "*"
+  }
+}

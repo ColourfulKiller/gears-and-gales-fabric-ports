@@ -1,0 +1,44 @@
+accessWidener v2 named
+# Converted from BlockUI's NeoForge accesstransformer.cfg (kept as accesstransformer.cfg.neoforge). Entries whose
+# targets no longer exist in 1.21.11 are dropped; new ones are for the 1.21.6+ GUI render-state system.
+
+# gui close if player dead
+accessible field net/minecraft/world/entity/LivingEntity dead Z
+
+# UiRenderMacros: textured quad with arbitrary UVs and a tint colour
+accessible method net/minecraft/client/gui/GuiGraphics innerBlit (Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIIIFFFFI)V
+
+# BOGuiGraphics: GuiGraphics with BlockUI's own matrix stack, sharing the screen's render state
+accessible method net/minecraft/client/gui/GuiGraphics <init> (Lnet/minecraft/client/Minecraft;Lorg/joml/Matrix3x2fStack;Lnet/minecraft/client/gui/render/state/GuiRenderState;II)V
+accessible field net/minecraft/client/gui/GuiGraphics minecraft Lnet/minecraft/client/Minecraft;
+accessible field net/minecraft/client/gui/GuiGraphics mouseX I
+accessible field net/minecraft/client/gui/GuiGraphics mouseY I
+
+# vanilla button textures
+accessible field net/minecraft/client/gui/components/AbstractButton SPRITES Lnet/minecraft/client/gui/components/WidgetSprites;
+
+# out-of-jar resource locations (an Identifier that also carries a file path)
+extendable class net/minecraft/resources/Identifier
+accessible method net/minecraft/resources/Identifier <init> (Ljava/lang/String;Ljava/lang/String;)V
+accessible method net/minecraft/server/packs/resources/FallbackResourceManager convertToMetadata (Lnet/minecraft/server/packs/resources/IoSupplier;)Lnet/minecraft/server/packs/resources/IoSupplier;
+
+# TextureLookup: check for a registered texture without loading one
+accessible field net/minecraft/client/renderer/texture/TextureManager byPath Ljava/util/Map;
+
+# cursor: hand the pixel buffer to GLFW
+accessible field com/mojang/blaze3d/platform/NativeImage pixels J
+
+# BlockToItemHelper: liquid block -> bucket
+accessible field net/minecraft/world/level/block/LiquidBlock fluid Lnet/minecraft/world/level/material/FlowingFluid;
+
+# com.ldtteam.fabric.nbt.NbtIO: CompoundTag bridge for 1.21.1-style block entity / entity NBT code
+accessible field net/minecraft/world/level/storage/TagValueInput input Lnet/minecraft/nbt/CompoundTag;
+accessible field net/minecraft/world/level/storage/TagValueOutput output Lnet/minecraft/nbt/CompoundTag;
+
+# Structurize / MineColonies: what an item frame holds (blueprint item requirements)
+transitive-accessible method net/minecraft/world/entity/decoration/ItemFrame getFrameItemStack ()Lnet/minecraft/world/item/ItemStack;
+# com.ldtteam.fabric.crafting.RecipeHooks
+accessible field net/minecraft/world/item/crafting/ShapedRecipe result Lnet/minecraft/world/item/ItemStack;
+accessible field net/minecraft/world/item/crafting/ShapelessRecipe result Lnet/minecraft/world/item/ItemStack;
+accessible field net/minecraft/world/item/crafting/ShapelessRecipe ingredients Ljava/util/List;
+accessible method net/minecraft/world/item/crafting/SingleItemRecipe result ()Lnet/minecraft/world/item/ItemStack;

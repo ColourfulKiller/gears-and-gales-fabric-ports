@@ -1,0 +1,42 @@
+package com.minecolonies.core.items;
+
+import com.minecolonies.api.colony.IColony;
+import com.minecolonies.api.colony.IColonyManager;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+
+import static com.minecolonies.api.util.constant.Constants.STACKSIZE;
+
+/**
+ * Class describing the Ancient Tome item.
+ */
+public class ItemAncientTome extends AbstractItemMinecolonies
+{
+    /**
+     * Sets the name, creative tab, and registers the Ancient Tome item.
+     *
+     * @param properties the properties.
+     */
+    public ItemAncientTome(final Properties properties)
+    {
+        super("ancienttome", properties.stacksTo(STACKSIZE).component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, false));
+    }
+
+    @Override
+    public void inventoryTick(final ItemStack stack, final net.minecraft.server.level.ServerLevel worldIn, final Entity entityIn, @org.jetbrains.annotations.Nullable final net.minecraft.world.entity.EquipmentSlot equipSlot)
+    {
+        final int itemSlot = -1;
+        final boolean isSelected = equipSlot == net.minecraft.world.entity.EquipmentSlot.MAINHAND;
+        super.inventoryTick(stack, worldIn, entityIn, equipSlot);
+        if (!worldIn.isClientSide())
+        {
+            final IColony colony = IColonyManager.getInstance().getClosestColony(worldIn, entityIn.blockPosition());
+            if (colony != null)
+            {
+                stack.set(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, colony.getRaiderManager().willRaidTonight());
+            }
+        }
+    }
+}

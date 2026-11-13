@@ -1,0 +1,209 @@
+{
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "on_shelf": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    }
+  },
+  "gui_light": "side",
+  "textures": {
+    "c0_block_0": "block/oak_planks",
+    "c0_block_particle": "block/oak_planks",
+    "particle": "domum_ornamentum:block/allbrick/allbrick_brick_overlay_dark",
+    "c1_overlay_5": "domum_ornamentum:block/allbrick/allbrick_brick_overlay_dark"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#c0_block_0",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "#c0_block_0",
+          "cullface": "east"
+        },
+        "south": {
+          "texture": "#c0_block_0",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#c0_block_0",
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#c0_block_0",
+          "cullface": "up"
+        },
+        "down": {
+          "texture": "#c0_block_0",
+          "cullface": "down"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "shade": true,
+      "faces": {
+        "north": {
+          "texture": "#c1_overlay_5",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "#c1_overlay_5",
+          "cullface": "east"
+        },
+        "south": {
+          "texture": "#c1_overlay_5",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#c1_overlay_5",
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#c1_overlay_5",
+          "cullface": "up"
+        },
+        "down": {
+          "texture": "#c1_overlay_5",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}

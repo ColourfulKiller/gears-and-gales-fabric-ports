@@ -1,0 +1,1050 @@
+{
+  "ambientocclusion": false,
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "on_shelf": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    }
+  },
+  "gui_light": "side",
+  "textures": {
+    "c1_first_1": "block/cobblestone",
+    "c1_first_3": "block/coal_block",
+    "c1_first_4": "minecolonies:block/books/paper_3",
+    "c1_first_5": "block/oak_log_top",
+    "c1_first_6": "block/spruce_log",
+    "c2_second_1": "block/cobblestone",
+    "c2_second_7": "block/stone",
+    "c2_second_8": "block/stone_bricks",
+    "c2_second_9": "block/clay",
+    "c2_second_10": "block/terracotta",
+    "c2_second_11": "minecolonies:block/item_sprites/minecraft/brick",
+    "c2_second_12": "minecolonies:block/item_sprites/minecraft/clay_ball",
+    "particle": "block/cobblestone",
+    "down": "#all",
+    "up": "#all",
+    "north": "#all",
+    "east": "#all",
+    "south": "#all",
+    "west": "#all"
+  },
+  "elements": [
+    {
+      "name": "Middle",
+      "from": [
+        7,
+        1,
+        1
+      ],
+      "to": [
+        8,
+        16,
+        15
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            0,
+            0,
+            14,
+            1
+          ],
+          "rotation": 90,
+          "texture": "#c1_first_1"
+        }
+      }
+    },
+    {
+      "name": "buttom",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        1,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ],
+          "texture": "#c1_first_1"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ],
+          "texture": "#c1_first_1"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ],
+          "texture": "#c1_first_1"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            1
+          ],
+          "texture": "#c1_first_1"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "rotation": 270,
+          "texture": "#c1_first_1"
+        }
+      }
+    },
+    {
+      "name": "left",
+      "from": [
+        0,
+        1,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        1
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            15
+          ],
+          "texture": "#c1_first_1"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            1,
+            15
+          ],
+          "texture": "#c1_first_1"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1,
+            15
+          ],
+          "texture": "#c1_first_1"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            1,
+            16
+          ],
+          "rotation": 90,
+          "texture": "#c1_first_1"
+        }
+      }
+    },
+    {
+      "name": "right",
+      "from": [
+        0,
+        1,
+        15
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            1,
+            15
+          ],
+          "texture": "#c1_first_1"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            15
+          ],
+          "texture": "#c1_first_1"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            1,
+            15
+          ],
+          "texture": "#c1_first_1"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            1,
+            16
+          ],
+          "rotation": 90,
+          "texture": "#c1_first_1"
+        }
+      }
+    },
+    {
+      "name": "log",
+      "from": [
+        8,
+        1,
+        1
+      ],
+      "to": [
+        16,
+        5,
+        5
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log2",
+      "from": [
+        8,
+        1,
+        5
+      ],
+      "to": [
+        16,
+        5,
+        9
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log3",
+      "from": [
+        8,
+        1,
+        9
+      ],
+      "to": [
+        16,
+        5,
+        13
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log4",
+      "from": [
+        8,
+        1,
+        13
+      ],
+      "to": [
+        16,
+        5,
+        15
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log5",
+      "from": [
+        8,
+        5,
+        11
+      ],
+      "to": [
+        16,
+        9,
+        15
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log6",
+      "from": [
+        8,
+        5,
+        7
+      ],
+      "to": [
+        16,
+        9,
+        11
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log7",
+      "from": [
+        8,
+        5,
+        3
+      ],
+      "to": [
+        16,
+        9,
+        7
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log8",
+      "from": [
+        8,
+        5,
+        1
+      ],
+      "to": [
+        16,
+        9,
+        3
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log9",
+      "from": [
+        8,
+        9,
+        1
+      ],
+      "to": [
+        16,
+        13,
+        5
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log10",
+      "from": [
+        8,
+        9,
+        5
+      ],
+      "to": [
+        16,
+        13,
+        9
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log11",
+      "from": [
+        8,
+        9,
+        9
+      ],
+      "to": [
+        16,
+        13,
+        13
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log12",
+      "from": [
+        8,
+        9,
+        13
+      ],
+      "to": [
+        16,
+        13,
+        15
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        }
+      }
+    },
+    {
+      "name": "log13",
+      "from": [
+        8,
+        13,
+        1
+      ],
+      "to": [
+        16,
+        16,
+        3
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        },
+        "up": {
+          "uv": [
+            1,
+            1,
+            7.999,
+            14.999
+          ],
+          "rotation": 90,
+          "texture": "#c1_first_6"
+        }
+      }
+    },
+    {
+      "name": "log14",
+      "from": [
+        8,
+        13,
+        3
+      ],
+      "to": [
+        16,
+        16,
+        7
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        },
+        "up": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "rotation": 90,
+          "texture": "#c1_first_6"
+        }
+      }
+    },
+    {
+      "name": "log15",
+      "from": [
+        8,
+        13,
+        7
+      ],
+      "to": [
+        16,
+        16,
+        11
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        },
+        "up": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "rotation": 90,
+          "texture": "#c1_first_6"
+        }
+      }
+    },
+    {
+      "name": "log16",
+      "from": [
+        8,
+        13,
+        11
+      ],
+      "to": [
+        16,
+        16,
+        15
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_5"
+        },
+        "up": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "rotation": 90,
+          "texture": "#c1_first_6"
+        }
+      }
+    },
+    {
+      "name": "paper",
+      "from": [
+        4,
+        6,
+        -0.5
+      ],
+      "to": [
+        12,
+        14,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c1_first_4"
+        },
+        "east": {
+          "uv": [
+            4.25,
+            0,
+            5.25,
+            16
+          ],
+          "texture": "#c1_first_4"
+        },
+        "west": {
+          "uv": [
+            4.25,
+            0,
+            5.5,
+            16
+          ],
+          "texture": "#c1_first_4"
+        },
+        "up": {
+          "uv": [
+            4.25,
+            0,
+            5.25,
+            8
+          ],
+          "rotation": 90,
+          "texture": "#c1_first_4"
+        },
+        "down": {
+          "uv": [
+            4.25,
+            0,
+            5.25,
+            8
+          ],
+          "rotation": 270,
+          "texture": "#c1_first_4"
+        }
+      }
+    },
+    {
+      "name": "coal",
+      "from": [
+        0,
+        1,
+        1
+      ],
+      "to": [
+        7,
+        16,
+        15
+      ],
+      "faces": {
+        "west": {
+          "uv": [
+            1,
+            0,
+            14.999,
+            15
+          ],
+          "texture": "#c1_first_3"
+        },
+        "up": {
+          "uv": [
+            1,
+            1,
+            15,
+            8
+          ],
+          "rotation": 90,
+          "texture": "#c1_first_3"
+        }
+      }
+    },
+    {
+      "name": "cobblestone",
+      "from": [
+        9.94,
+        11.75,
+        -0.501
+      ],
+      "to": [
+        10.94,
+        12.75,
+        -0.491
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c2_second_1"
+        }
+      }
+    },
+    {
+      "name": "stone1",
+      "from": [
+        4.94,
+        11.75,
+        -0.501
+      ],
+      "to": [
+        5.94,
+        12.75,
+        -0.491
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c2_second_7"
+        }
+      }
+    },
+    {
+      "name": "stone2",
+      "from": [
+        9.94,
+        10.19,
+        -0.501
+      ],
+      "to": [
+        10.94,
+        11.19,
+        -0.491
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c2_second_7"
+        }
+      }
+    },
+    {
+      "name": "stonebricks",
+      "from": [
+        4.94,
+        10.19,
+        -0.501
+      ],
+      "to": [
+        5.94,
+        11.19,
+        -0.491
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c2_second_8"
+        }
+      }
+    },
+    {
+      "name": "clay_ball",
+      "from": [
+        9.94,
+        7.19,
+        -0.501
+      ],
+      "to": [
+        10.94,
+        8.19,
+        -0.491
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c2_second_12"
+        }
+      }
+    },
+    {
+      "name": "brick",
+      "from": [
+        4.94,
+        7.12,
+        -0.501
+      ],
+      "to": [
+        5.94,
+        8.12,
+        -0.491
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c2_second_11"
+        }
+      }
+    },
+    {
+      "name": "clay",
+      "from": [
+        9.94,
+        8.63,
+        -0.501
+      ],
+      "to": [
+        10.94,
+        9.63,
+        -0.491
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c2_second_9"
+        }
+      }
+    },
+    {
+      "name": "terracota",
+      "from": [
+        4.94,
+        8.63,
+        -0.501
+      ],
+      "to": [
+        5.94,
+        9.63,
+        -0.491
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#c2_second_10"
+        }
+      }
+    }
+  ]
+}

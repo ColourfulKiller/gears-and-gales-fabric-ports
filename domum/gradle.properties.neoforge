@@ -1,0 +1,37 @@
+org.gradle.daemon=true
+org.gradle.parallel=true
+org.gradle.caching=true
+org.gradle.configuration-cache=true
+
+local.version=1.0.0-local
+
+### Toolchain setup
+javaVersion=21
+additionalMinecraftVersions=
+
+### Project
+type=MOD
+license=gplv3
+author=ldtteam
+modId=domumornamentum
+description=A Minecraft mod about creating a lot of varieties of blocks from any combination of blocks with an architectscutter.
+
+### Minecraft
+minecraft.version=1.21.1
+minecraft.version.minimal=1.21
+
+### Parchment
+parchment.version=2024.11.13
+parchment.minecraftVersion=1.21.1
+
+### Neoforge
+neoforge.version=21.1.+
+neoforge.data.runs=data
+
+### Publishing
+curse.id=527361
+
+### Dependencies:
+jei_mcversion=1.21
+jei_version=19.8.2.99
+dataGeneratorsVersion=1.20.4-0.1.57-ALPHA

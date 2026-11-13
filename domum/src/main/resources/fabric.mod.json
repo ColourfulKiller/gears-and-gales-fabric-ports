@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "domum_ornamentum",
+  "version": "${version}",
+  "name": "Domum Ornamentum (Fabric port)",
+  "description": "Architect's Cutter and retexturable decorative blocks, ported from LDT Team's NeoForge Domum Ornamentum.",
+  "authors": ["LDT Team"],
+  "contributors": ["Fabric port: tyler"],
+  "contact": { "sources": "https://github.com/ldtteam/Domum-Ornamentum" },
+  "license": "GPL-3.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.ldtteam.domumornamentum.DomumOrnamentum"],
+    "client": ["com.ldtteam.domumornamentum.client.DomumOrnamentumClient"]
+  },
+  "accessWidener": "domum_ornamentum.accesswidener",
+  "depends": {
+    "fabricloader": ">=0.20.0",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*",
+    "blockui": "*"
+  }
+}

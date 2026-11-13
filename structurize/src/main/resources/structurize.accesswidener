@@ -1,0 +1,27 @@
+accessWidener v2 named
+
+# blueprint preview: draw a cached mesh with a vanilla RenderType's textures (RenderType.draw only takes a fresh MeshData)
+accessible field net/minecraft/client/renderer/rendertype/RenderType state Lnet/minecraft/client/renderer/rendertype/RenderSetup;
+
+# pick-block handling re-queues the click it consumed
+accessible field net/minecraft/client/KeyMapping clickCount I
+
+# blueprint item requirements: what an item frame holds
+accessible method net/minecraft/world/entity/decoration/ItemFrame getFrameItemStack ()Lnet/minecraft/world/item/ItemStack;
+
+# blueprint data fixing (pre-1.13 flower pots / note blocks)
+accessible class net/minecraft/util/datafix/fixes/ChunkPalettedStorageFix$MappingConstants
+accessible field net/minecraft/util/datafix/fixes/ChunkPalettedStorageFix$MappingConstants FLOWER_POT_MAP Ljava/util/Map;
+accessible field net/minecraft/util/datafix/fixes/ChunkPalettedStorageFix$MappingConstants NOTE_BLOCK_MAP Ljava/util/Map;
+
+# solid substitution: evaluate the dimension's surface rules at a position
+accessible class net/minecraft/world/level/levelgen/SurfaceRules$Context
+accessible method net/minecraft/world/level/levelgen/SurfaceRules$Context <init> (Lnet/minecraft/world/level/levelgen/SurfaceSystem;Lnet/minecraft/world/level/levelgen/RandomState;Lnet/minecraft/world/level/chunk/ChunkAccess;Lnet/minecraft/world/level/levelgen/NoiseChunk;Ljava/util/function/Function;Lnet/minecraft/core/Registry;Lnet/minecraft/world/level/levelgen/WorldGenerationContext;)V
+accessible method net/minecraft/world/level/levelgen/SurfaceRules$Context updateXZ (II)V
+accessible method net/minecraft/world/level/levelgen/SurfaceRules$Context updateY (IIIIII)V
+accessible class net/minecraft/world/level/levelgen/SurfaceRules$SurfaceRule
+accessible method net/minecraft/world/level/levelgen/NoiseBasedChunkGenerator createNoiseChunk (Lnet/minecraft/world/level/chunk/ChunkAccess;Lnet/minecraft/world/level/StructureManager;Lnet/minecraft/world/level/levelgen/blending/Blender;Lnet/minecraft/world/level/levelgen/RandomState;)Lnet/minecraft/world/level/levelgen/NoiseChunk;
+
+# block / fluid helpers
+accessible field net/minecraft/world/level/block/LiquidBlock fluid Lnet/minecraft/world/level/material/FlowingFluid;
+accessible field net/minecraft/world/level/block/state/BlockBehaviour hasCollision Z

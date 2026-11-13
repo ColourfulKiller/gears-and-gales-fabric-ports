@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.ldtteam.blockui.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockPropertiesIdMixin",
+    "ItemPropertiesIdMixin",
+    "ExplosionResistanceMixin",
+    "CloneItemStackMixin",
+    "BlockBehaviourIdAccessor",
+    "ItemIdAccessor",
+    "RegistryFixupMixin"
+  ],
+  "client": [
+    "MouseHandlerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

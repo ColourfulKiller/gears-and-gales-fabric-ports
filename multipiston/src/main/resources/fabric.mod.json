@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "multipiston",
+  "version": "${version}",
+  "name": "MultiPiston",
+  "description": "A configurable piston that moves several blocks at once (Fabric 1.21.11 port of the NeoForge 1.21.1 mod, upstream ldtteam/Piston-Unlimited).",
+  "authors": ["ldtteam"],
+  "contact": { "sources": "https://github.com/ldtteam/Piston-Unlimited" },
+  "license": "GPL-3.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.ldtteam.multipiston.MultiPiston"]
+  },
+  "accessWidener": "multipiston.accesswidener",
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~1.21.11",
+    "fabric-api": "*",
+    "blockui": "*",
+    "structurize": "*"
+  }
+}

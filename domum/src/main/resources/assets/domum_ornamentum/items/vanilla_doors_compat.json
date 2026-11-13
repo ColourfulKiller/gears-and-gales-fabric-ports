@@ -1,0 +1,41 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:block_state",
+    "block_state_property": "type",
+    "cases": [
+      {
+        "when": "full",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:item/door/door_full_spec"
+        }
+      },
+      {
+        "when": "port_manteau",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:item/door/door_port_manteau_spec"
+        }
+      },
+      {
+        "when": "vertically_striped",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:item/door/door_vertically_striped_spec"
+        }
+      },
+      {
+        "when": "waffle",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:item/door/door_waffle_spec"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "domum_ornamentum:materially_textured",
+      "model": "domum_ornamentum:item/door/door_full_spec"
+    }
+  }
+}

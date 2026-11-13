@@ -1,0 +1,61 @@
+accessWidener v2 named
+
+# colony mobs: hostile mobs target citizens (EventHandler), raid spawner tracking
+accessible field net/minecraft/world/entity/Mob targetSelector Lnet/minecraft/world/entity/ai/goal/GoalSelector;
+accessible field net/minecraft/world/level/BaseSpawner nextSpawnData Lnet/minecraft/world/level/SpawnData;
+
+# converted from the NeoForge accesstransformer.cfg (tools/at_to_aw.py)
+accessible method net/minecraft/client/gui/components/Button <init> (IIIILnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/components/Button$OnPress;Lnet/minecraft/client/gui/components/Button$CreateNarration;)V
+accessible field net/minecraft/client/gui/components/Button DEFAULT_NARRATION Lnet/minecraft/client/gui/components/Button$CreateNarration;
+accessible field net/minecraft/client/multiplayer/ClientAdvancements progress Ljava/util/Map;
+accessible method net/minecraft/client/renderer/entity/layers/HumanoidArmorLayer usesInnerModel (Lnet/minecraft/world/entity/EquipmentSlot;)Z
+accessible field net/minecraft/server/level/ChunkMap visibleChunkMap Lit/unimi/dsi/fastutil/longs/Long2ObjectLinkedOpenHashMap;
+accessible field net/minecraft/server/level/ServerLevel navigatingMobs Ljava/util/Set;
+accessible field net/minecraft/world/damagesource/CombatTracker entries Ljava/util/List;
+accessible field net/minecraft/world/entity/ai/goal/GoalSelector availableGoals Ljava/util/Set;
+mutable field net/minecraft/world/entity/ai/goal/GoalSelector availableGoals Ljava/util/Set;
+accessible field net/minecraft/world/entity/ai/goal/GoalSelector disabledFlags Ljava/util/EnumSet;
+accessible field net/minecraft/world/entity/ai/goal/GoalSelector lockedFlags Ljava/util/Map;
+accessible field net/minecraft/world/entity/Entity dimensions Lnet/minecraft/world/entity/EntityDimensions;
+accessible method net/minecraft/world/entity/Entity updateFluidOnEyes ()V
+accessible method net/minecraft/world/entity/LivingEntity checkBedExists ()Z
+accessible method net/minecraft/world/entity/LivingEntity detectEquipmentUpdates ()V
+accessible method net/minecraft/world/entity/LivingEntity updateFallFlying ()V
+accessible method net/minecraft/world/entity/LivingEntity updateSwimAmount ()V
+accessible method net/minecraft/world/entity/Mob checkAndHandleImportantInteractions (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
+accessible field net/minecraft/world/entity/Mob goalSelector Lnet/minecraft/world/entity/ai/goal/GoalSelector;
+mutable field net/minecraft/world/entity/Mob goalSelector Lnet/minecraft/world/entity/ai/goal/GoalSelector;
+accessible field net/minecraft/world/entity/Mob moveControl Lnet/minecraft/world/entity/ai/control/MoveControl;
+mutable field net/minecraft/world/entity/Mob targetSelector Lnet/minecraft/world/entity/ai/goal/GoalSelector;
+accessible method net/minecraft/world/entity/projectile/arrow/AbstractArrow shouldFall ()Z
+accessible field net/minecraft/world/entity/vehicle/minecart/AbstractMinecart flipped Z
+accessible field net/minecraft/world/item/CreativeModeTab displayItemsGenerator Lnet/minecraft/world/item/CreativeModeTab$DisplayItemsGenerator;
+accessible field net/minecraft/world/level/BaseSpawner requiredPlayerRange I
+accessible method net/minecraft/world/level/block/DoorBlock playSound (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Z)V
+accessible method net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity isLit ()Z
+accessible method net/minecraft/world/level/block/entity/BeehiveBlockEntity releaseAllOccupants (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/BeehiveBlockEntity$BeeReleaseStatus;)Ljava/util/List;
+accessible field net/minecraft/world/level/block/entity/BrewingStandBlockEntity brewTime I
+accessible field net/minecraft/world/level/block/state/BlockBehaviour$Properties hasCollision Z
+accessible field net/minecraft/world/level/storage/loot/ValidationContext reporter Lnet/minecraft/util/ProblemReporter;
+accessible field net/minecraft/world/level/storage/loot/ValidationContext resolver Ljava/util/Optional;
+accessible field net/minecraft/world/level/storage/loot/ValidationContext visitedElements Ljava/util/Set;
+accessible method net/minecraft/world/entity/Entity setRemoved (Lnet/minecraft/world/entity/Entity$RemovalReason;)V
+extendable method net/minecraft/world/entity/Entity setRemoved (Lnet/minecraft/world/entity/Entity$RemovalReason;)V
+accessible method net/minecraft/world/entity/projectile/arrow/AbstractArrow setPierceLevel (B)V
+accessible field net/minecraft/world/level/block/StemBlock fruit Lnet/minecraft/resources/ResourceKey;
+accessible method net/minecraft/world/level/entity/PersistentEntitySectionManager stopTracking (Lnet/minecraft/world/level/entity/EntityAccess;)V
+accessible field net/minecraft/server/level/ServerLevel entityManager Lnet/minecraft/world/level/entity/PersistentEntitySectionManager;
+accessible field net/minecraft/world/level/block/state/BlockBehaviour hasCollision Z
+accessible method net/minecraft/commands/arguments/ResourceKeyArgument resolveKey (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;Lnet/minecraft/resources/ResourceKey;Lcom/mojang/brigadier/exceptions/DynamicCommandExceptionType;)Lnet/minecraft/core/Holder$Reference;
+extendable method net/minecraft/world/entity/Entity updateFluidOnEyes ()V
+extendable method net/minecraft/world/entity/LivingEntity checkBedExists ()Z
+extendable method net/minecraft/world/entity/LivingEntity detectEquipmentUpdates ()V
+extendable method net/minecraft/world/entity/LivingEntity updateSwimAmount ()V
+accessible field net/minecraft/world/entity/LivingEntity lastHurtByPlayerMemoryTime I
+extendable method net/minecraft/world/entity/Mob checkAndHandleImportantInteractions (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
+accessible field net/minecraft/world/entity/projectile/arrow/AbstractArrow baseDamage D
+accessible field net/minecraft/world/entity/animal/equine/AbstractHorse owner Lnet/minecraft/world/entity/EntityReference;
+mutable field net/minecraft/world/entity/animal/equine/AbstractHorse owner Lnet/minecraft/world/entity/EntityReference;
+accessible method net/minecraft/world/entity/animal/equine/Horse setVariant (Lnet/minecraft/world/entity/animal/equine/Variant;)V
+accessible method net/minecraft/server/level/ChunkMap getVisibleChunkIfPresent (J)Lnet/minecraft/server/level/ChunkHolder;
+accessible method net/minecraft/world/damagesource/CombatTracker getMostSignificantFall ()Lnet/minecraft/world/damagesource/CombatEntry;

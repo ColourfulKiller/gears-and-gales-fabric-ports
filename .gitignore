@@ -1,0 +1,23 @@
+# Build output and IDE / Gradle state
+build/
+bin/
+out/
+.gradle/
+.idea/
+*.iml
+
+# Dev runs (worlds, configs, logs, eula.txt)
+run/
+logs/
+
+# Decompiled Minecraft source (Mojang's code: never publish)
+mc-src-1.21.11/
+
+# Local build / run logs (contain local paths)
+build-*.txt
+gensrc-*.txt
+run-*.txt
+*.log
+
+# Python caches from tools/
+__pycache__/

@@ -1,0 +1,35 @@
+
+plugins {
+    id 'net.darkhax.curseforgegradle' version '1.1.28'
+}
+
+tableau {
+    project {
+        group = "com.ldtteam"
+        publisher = "LDTTeam"
+        modId = "domum_ornamentum"
+    }
+
+    sourceSets {
+        api {
+            isPartOfPrimaryJar = true
+            neogradle {
+                isModSource = true
+            }
+        }
+        main {
+            dependencies {
+                implementation sourceSets.named('api')
+            }
+        }
+    }
+
+    maven {
+        publishAsLDTTeamMod()
+        publishLocally()
+        pom({
+            usingGnu3License()
+            usingGit()
+        })
+    }
+}

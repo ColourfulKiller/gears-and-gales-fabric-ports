@@ -1,0 +1,26 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.ldtteam.fabric.event.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockItemPlaceMixin",
+    "BowLooseMixin",
+    "EntityTravelMixin",
+    "ExplosionEventsMixin",
+    "FarmBlockTrampleMixin",
+    "ItemEntityPickupMixin",
+    "LevelChunkRemovalMixin",
+    "MobEventsMixin",
+    "PlayerItemEventsMixin",
+    "PlayerTickMixin",
+    "ServerLevelEventsMixin"
+  ],
+  "client": [
+    "client.GuiGraphicsDecorationsMixin",
+    "client.SoundEngineMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

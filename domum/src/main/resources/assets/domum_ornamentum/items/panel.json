@@ -1,0 +1,118 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:block_state",
+    "block_state_property": "type",
+    "cases": [
+      {
+        "when": "boss",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_boss_spec"
+        }
+      },
+      {
+        "when": "coffer",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_coffer_spec"
+        }
+      },
+      {
+        "when": "full",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_full_spec"
+        }
+      },
+      {
+        "when": "horizontal_bars",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_horizontal_bars_spec"
+        }
+      },
+      {
+        "when": "horizontally_squiggly_striped",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_horizontally_squiggly_striped_spec"
+        }
+      },
+      {
+        "when": "horizontally_striped",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_horizontally_striped_spec"
+        }
+      },
+      {
+        "when": "moulding",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_moulding_spec"
+        }
+      },
+      {
+        "when": "port_manteau",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_port_manteau_spec"
+        }
+      },
+      {
+        "when": "porthole",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_porthole_spec"
+        }
+      },
+      {
+        "when": "roundel",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_roundel_spec"
+        }
+      },
+      {
+        "when": "slot",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_slot_spec"
+        }
+      },
+      {
+        "when": "vertical_bars",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_vertical_bars_spec"
+        }
+      },
+      {
+        "when": "vertically_squiggly_striped",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_vertically_squiggly_striped_spec"
+        }
+      },
+      {
+        "when": "vertically_striped",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_vertically_striped_spec"
+        }
+      },
+      {
+        "when": "waffle",
+        "model": {
+          "type": "domum_ornamentum:materially_textured",
+          "model": "domum_ornamentum:block/panel/panel_waffle_spec"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "domum_ornamentum:materially_textured",
+      "model": "domum_ornamentum:block/panel/panel_boss_spec"
+    }
+  }
+}
