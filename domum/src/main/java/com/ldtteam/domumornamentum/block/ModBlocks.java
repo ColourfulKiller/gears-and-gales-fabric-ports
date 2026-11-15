@@ -329,7 +329,7 @@ public final class ModBlocks implements IModBlocks {
      * Get or compute the item group specifics.
      * @return the item group.
      */
-    public Map<Identifier, List<ItemStack>> getOrComputeItemGroups()
+    public synchronized Map<Identifier, List<ItemStack>> getOrComputeItemGroups()
     {
         if (itemGroups.isEmpty())
         {

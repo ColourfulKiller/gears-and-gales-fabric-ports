@@ -128,20 +128,26 @@ public interface IMateriallyTexturedBlock extends PositionalBlockHooks
     }
 
     default void fillDOItemCategory(final Block inputBlock, final @NotNull NonNullList<ItemStack> items, List<ItemStack> fillItemGroupCache) {
-        if (!fillItemGroupCache.isEmpty()) {
-            items.addAll(fillItemGroupCache);
-            return;
+        // The cache is shared by the client thread (creative tabs) and the integrated server thread
+        // (Architect's Cutter), so fill it atomically and never let it hold more than one stack.
+        synchronized (fillItemGroupCache) {
+            if (fillItemGroupCache.isEmpty()) {
+                try {
+                    fillItemGroupCache.add(new ItemStack(inputBlock));
+                }
+                catch (IllegalStateException exception) {
+                    //Ignored. Thrown during start up.
+                }
+            }
+            else if (fillItemGroupCache.size() > 1) {
+                final ItemStack first = fillItemGroupCache.get(0);
+                fillItemGroupCache.clear();
+                fillItemGroupCache.add(first);
+            }
+            for (final ItemStack stack : fillItemGroupCache) {
+                items.add(stack.copy());
+            }
         }
-
-        try {
-            final ItemStack result = new ItemStack(inputBlock);
-            fillItemGroupCache.add(result);
-        }
-        catch (IllegalStateException exception) {
-            //Ignored. Thrown during start up.
-        }
-
-        items.addAll(fillItemGroupCache);
     }
 
     /**

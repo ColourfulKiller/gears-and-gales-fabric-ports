@@ -80,11 +80,18 @@ public final class ModCreativeTabs {
             delegate.accept(featureFlagSet, new Output(output));
         }
 
-        private record Output(CreativeModeTab.Output delegate) implements CreativeModeTab.Output {
+        private record Output(CreativeModeTab.Output delegate, java.util.Set<ItemStack> seen) implements CreativeModeTab.Output {
+
+            private Output(CreativeModeTab.Output delegate) {
+                this(delegate, net.minecraft.world.item.ItemStackLinkedSet.createTypeAndComponentsSet());
+            }
 
             @Override
             public void accept(@NotNull ItemStack stack, CreativeModeTab.@NotNull TabVisibility visibility) {
-                delegate.accept(stack, visibility);
+                // Vanilla throws on duplicate stacks; skip them instead of crashing the creative screen.
+                if (!stack.isEmpty() && seen.add(stack)) {
+                    delegate.accept(stack, visibility);
+                }
             }
 
             @Override
@@ -93,11 +100,11 @@ public final class ModCreativeTabs {
                 if (itemLike instanceof ICachedItemGroupBlock cachedItemGroupBlock) {
                     final NonNullList<ItemStack> stacks = NonNullList.create();
                     cachedItemGroupBlock.fillItemCategory(stacks);
-                    stacks.forEach(delegate::accept);
+                    stacks.forEach(this::accept);
                 }
                 else
                 {
-                    delegate.accept(itemLike);
+                    accept(new ItemStack(itemLike));
                 }
             }
         }
