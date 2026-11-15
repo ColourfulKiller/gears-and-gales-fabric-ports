@@ -55,13 +55,25 @@ public class ItemNbtListener extends com.ldtteam.fabric.data.RegistryAwareJsonLi
             {
                 final JsonObject jsonObj = element.getAsJsonObject();
                 final Identifier itemLoc = Identifier.parse(jsonObj.get("item").getAsString());
+                if (!BuiltInRegistries.ITEM.containsKey(itemLoc))
+                {
+                    continue;
+                }
                 if (jsonObj.has("checkednbtkeys"))
                 {
                     final HashSet<DataComponentType<?>> set = new HashSet<>();
                     final JsonArray jsonArray = jsonObj.getAsJsonArray("checkednbtkeys");
                     for (final JsonElement subElement : jsonArray)
                     {
-                        set.add(BuiltInRegistries.DATA_COMPONENT_TYPE.getValue(Identifier.parse(subElement.getAsString())));
+                        final Identifier componentId = Identifier.parse(subElement.getAsString());
+                        final DataComponentType<?> componentType = BuiltInRegistries.DATA_COMPONENT_TYPE.getValue(componentId);
+                        if (componentType == null)
+                        {
+                            // Unknown (renamed or removed) component: skip it, a null key breaks the login sync packet.
+                            Log.getLogger().warn("Unknown data component '" + componentId + "' in " + entry.getKey() + " for " + itemLoc + ", ignoring");
+                            continue;
+                        }
+                        set.add(componentType);
                     }
 
                     ItemStackUtils.CHECKED_NBT_KEYS.put(BuiltInRegistries.ITEM.getValue(itemLoc), set);

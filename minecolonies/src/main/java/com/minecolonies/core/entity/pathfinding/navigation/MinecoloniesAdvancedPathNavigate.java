@@ -572,7 +572,9 @@ public class MinecoloniesAdvancedPathNavigate extends AbstractAdvancedPathNaviga
     @Override
     protected PathFinder createPathFinder(final int p_179679_1_)
     {
-        return null;
+        // MineColonies does its own pathfinding, but since 1.21.9 the vanilla PathNavigation constructor
+        // calls setCaptureDebug on this on server levels, so it must not be null. It is never used to find paths.
+        return new PathFinder(new net.minecraft.world.level.pathfinder.WalkNodeEvaluator(), p_179679_1_);
     }
 
     @Override
